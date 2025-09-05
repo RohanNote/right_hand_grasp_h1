@@ -1,0 +1,102 @@
+<mujoco model="allegro_left">
+    <body name="palm_left" pos="0.02 0.0 0.217" quat="1 0 0 0" childclass="allegro_left">
+      <geom quat="1 -1 0 0" class="palm_visual_left" mesh="base_link_left"/>
+      <geom class="palm_collision_left"/>
+      <body name="rf_base_left" pos="0 0.0435 -0.001542" quat="0.999048 -0.0436194 0 0">
+        <joint name="rfj0_left" class="base_left"/>
+        <geom class="base_visual_left"/>
+        <geom class="base_collision_left"/>
+        <body name="rf_proximal_left" pos="0 0 0.0164">
+          <joint name="rfj1_left" class="proximal_left"/>
+          <geom class="proximal_visual_left"/>
+          <geom class="proximal_collision_left"/>
+          <body name="rf_medial_left" pos="0 0 0.054">
+            <joint name="rfj2_left" class="medial_left"/>
+            <geom class="medial_visual_left"/>
+            <geom class="medial_collision_left"/>
+            <body name="rf_distal_left" pos="0 0 0.0384">
+              <joint name="rfj3_left" class="distal_left"/>
+              <geom class="distal_visual_left"/>
+              <geom class="distal_collision_left"/>
+              <body name="rf_tip_left">
+                <geom class="fingertip_visual_left"/>
+                <geom class="fingertip_collision_left"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="mf_base_left" pos="0 0 0.0007">
+        <joint name="mfj0_left" class="base_left"/>
+        <geom class="base_visual_left"/>
+        <geom class="base_collision_left"/>
+        <body name="mf_proximal_left" pos="0 0 0.0164">
+          <joint name="mfj1_left" class="proximal_left"/>
+          <geom class="proximal_visual_left"/>
+          <geom class="proximal_collision_left"/>
+          <body name="mf_medial_left" pos="0 0 0.054">
+            <joint name="mfj2_left" class="medial_left"/>
+            <geom class="medial_visual_left"/>
+            <geom class="medial_collision_left"/>
+            <body name="mf_distal_left" pos="0 0 0.0384">
+              <joint name="mfj3_left" class="distal_left"/>
+              <geom class="distal_visual_left"/>
+              <geom class="distal_collision_left"/>
+              <body name="mf_tip_left">
+                <geom class="fingertip_visual_left"/>
+                <geom class="fingertip_collision_left"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="ff_base_left" pos="0 -0.0435 -0.001542" quat="0.999048 0.0436194 0 0">
+        <joint name="ffj0_left" class="base_left"/>
+        <geom class="base_visual_left"/>
+        <geom class="base_collision_left"/>
+        <body name="ff_proximal_left" pos="0 0 0.0164">
+          <joint name="ffj1_left" class="proximal_left"/>
+          <geom class="proximal_visual_left"/>
+          <geom class="proximal_collision_left"/>
+          <body name="ff_medial_left" pos="0 0 0.054">
+            <joint name="ffj2_left" class="medial_left"/>
+            <geom class="medial_visual_left"/>
+            <geom class="medial_collision_left"/>
+            <body name="ff_distal_left" pos="0 0 0.0384">
+              <joint name="ffj3_left" class="distal_left"/>
+              <geom class="distal_visual_left"/>
+              <geom class="distal_collision_left"/>
+              <body name="ff_tip_left">
+                <geom class="fingertip_visual_left"/>
+                <geom class="fingertip_collision_left"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="th_base_left" pos="-0.0182 -0.019333 -0.045987" quat="0.477714 0.521334 -0.521334 0.477714">
+        <joint name="thj0_left" class="thumb_base_left"/>
+        <geom quat="0 1 0 0" class="visual_left" mesh="link_12.0_left"/>
+        <geom class="thumb_base_collision_left"/>
+        <body name="th_proximal_left" pos="-0.027 -0.005 0.0399">
+          <joint name="thj1_left" class="thumb_proximal_left"/>
+          <geom class="visual_left" mesh="link_13.0"/>
+          <geom class="thumb_proximal_collision_left"/>
+          <body name="th_medial_left" pos="0 0 0.0177">
+            <joint name="thj2_left" class="thumb_medial_left"/>
+            <geom class="visual_left" mesh="link_14.0"/>
+            <geom class="thumb_medial_collision_left"/>
+            <body name="th_distal_left" pos="0 0 0.0514">
+              <joint name="thj3_left" class="thumb_distal_left"/>
+              <geom class="visual_left" mesh="link_15.0"/>
+              <geom class="thumb_distal_collision_left"/>
+              <body name="th_tip_left">
+                <geom class="thumbtip_visual_left"/>
+                <geom class="thumbtip_collision_left"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+</mujoco>

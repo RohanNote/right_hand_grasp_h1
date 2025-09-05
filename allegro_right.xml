@@ -1,0 +1,123 @@
+<mujoco model="allegro_right">
+    <body name="palm_right" pos="0.02 0.0 0.217" quat="1 0 0 0" childclass="allegro_right">
+      <geom class="palm_visual_right" mesh="base_link"/>
+      <geom class="palm_collision_right"/>
+      <!-- Add palm center site for force sensor -->
+      <site name="palm_center" pos="0 0 0" size="0.015" rgba="0 1 0 1"/>
+      <!-- Visual marker for palm contact sensor -->
+      <geom name="palm_contact_marker" type="sphere" size="0.01" pos="0 0 0" rgba="0 1 0 1"/>
+      
+      <body name="ff_base_right" pos="0 0.0435 -0.001542" quat="0.999048 -0.0436194 0 0">
+        <joint name="ffj0_right" class="base_right"/>
+        <geom class="base_visual_right"/>
+        <geom class="base_collision_right"/>
+        <body name="ff_proximal_right" pos="0 0 0.0164">
+          <joint name="ffj1_right" class="proximal_right"/>
+          <geom class="proximal_visual_right"/>
+          <geom class="proximal_collision_right"/>
+          <body name="ff_medial_right" pos="0 0 0.054">
+            <joint name="ffj2_right" class="medial_right"/>
+            <geom class="medial_visual_right"/>
+            <geom class="medial_collision_right"/>
+            <body name="ff_distal_right" pos="0 0 0.0384">
+              <joint name="ffj3_right" class="distal_right"/>
+              <geom class="distal_visual_right"/>
+              <geom class="distal_collision_right"/>
+              <body name="ff_tip_right">
+                <geom class="fingertip_visual_right"/>
+                <geom class="fingertip_collision_right"/>
+                <!-- Add site for tactile sensor -->
+                <site name="index_tip" pos="0 0 0.02" size="0.012" rgba="1 0 0 1"/>
+                <!-- Visual marker for index contact sensor -->
+                <geom name="index_contact_marker" type="sphere" size="0.008" pos="0 0 0.03" rgba="1 0 0 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="mf_base_right" pos="0 0 0.0007">
+        <joint name="mfj0_right" class="base_right"/>
+        <geom class="base_visual_right"/>
+        <geom class="base_collision_right"/>
+        <body name="mf_proximal_right" pos="0 0 0.0164">
+          <joint name="mfj1_right" class="proximal_right"/>
+          <geom class="proximal_visual_right"/>
+          <geom class="proximal_collision_right"/>
+          <body name="mf_medial_right" pos="0 0 0.054">
+            <joint name="mfj2_right" class="medial_right"/>
+            <geom class="medial_visual_right"/>
+            <geom class="medial_collision_right"/>
+            <body name="mf_distal_right" pos="0 0 0.0384">
+              <joint name="mfj3_right" class="distal_right"/>
+              <geom class="distal_visual_right"/>
+              <geom class="distal_collision_right"/>
+              <body name="mf_tip_right">
+                <geom class="fingertip_visual_right"/>
+                <geom class="fingertip_collision_right"/>
+                <!-- Add site for tactile sensor -->
+                <site name="middle_tip" pos="0 0 0.02" size="0.012" rgba="0 1 0 1"/>
+                <!-- Visual marker for middle contact sensor -->
+                <geom name="middle_contact_marker" type="sphere" size="0.008" pos="0 0 0.03" rgba="0 1 0 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="rf_base_right" pos="0 -0.0435 -0.001542" quat="0.999048 0.0436194 0 0">
+        <joint name="rfj0_right" class="base_right"/>
+        <geom class="base_visual_right"/>
+        <geom class="base_collision_right"/>
+        <body name="rf_proximal_right" pos="0 0 0.0164">
+          <joint name="rfj1_right" class="proximal_right"/>
+          <geom class="proximal_visual_right"/>
+          <geom class="proximal_collision_right"/>
+          <body name="rf_medial_right" pos="0 0 0.054">
+            <joint name="rfj2_right" class="medial_right"/>
+            <geom class="medial_visual_right"/>
+            <geom class="medial_collision_right"/>
+            <body name="rf_distal_right" pos="0 0 0.0384">
+              <joint name="rfj3_right" class="distal_right"/>
+              <geom class="distal_visual_right"/>
+              <geom class="distal_collision_right"/>
+              <body name="rf_tip_right">
+                <geom class="fingertip_visual_right"/>
+                <geom class="fingertip_collision_right"/>
+                <!-- Add site for tactile sensor -->
+                <site name="ring_tip" pos="0 0 0.02" size="0.012" rgba="0 0 1 1"/>
+                <!-- Visual marker for ring contact sensor -->
+                <geom name="ring_contact_marker" type="sphere" size="0.008" pos="0 0 0.03" rgba="0 0 1 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="th_base_right" pos="-0.0182 0.019333 -0.045987" quat="0.477714 -0.521334 -0.521334 -0.477714">
+        <joint name="thj0_right" class="thumb_base_right"/>
+        <geom class="visual_right" mesh="link_12.0_right"/>
+        <geom class="thumb_base_collision_right"/>
+        <body name="th_proximal_right" pos="-0.027 0.005 0.0399">
+          <joint name="thj1_right" class="thumb_proximal_right"/>
+          <geom class="visual_right" mesh="link_13.0"/>
+          <geom class="thumb_proximal_collision_right"/>
+          <body name="th_medial_right" pos="0 0 0.0177">
+            <joint name="thj2_right" class="thumb_medial_right"/>
+            <geom class="visual_right" mesh="link_14.0"/>
+            <geom class="thumb_medial_collision_right"/>
+            <body name="th_distal_right" pos="0 0 0.0514">
+              <joint name="thj3_right" class="thumb_distal_right"/>
+              <geom class="visual_right" mesh="link_15.0"/>
+              <geom class="thumb_distal_collision_right"/>
+              <body name="th_tip_right">
+                <geom class="thumbtip_visual_right"/>
+                <geom class="thumbtip_collision_right"/>
+                <!-- Add site for tactile sensor -->
+                <site name="thumb_tip" pos="0 0 0.02" size="0.012" rgba="1 1 0 1"/>
+                <!-- Visual marker for thumb contact sensor -->
+                <geom name="thumb_contact_marker" type="sphere" size="0.008" pos="0 0 0.03" rgba="1 1 0 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+</mujoco>
