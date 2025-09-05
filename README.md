@@ -18,8 +18,6 @@ This system trains a humanoid robot (H1) with Allegro hands to perform precise g
 - **Advanced CNN**: Residual blocks with spatial attention mechanism
 - **Contact Sensing**: Binary touch detection on palm and all fingertips
 - **Progressive Rewards**: Shaped rewards for orientation, approach, grasp, and lift
-- **HPC Optimized**: Designed for A100 GPUs with 80GB memory
-- **Professional Code**: Clean, documented, and production-ready
 
 ## Architecture
 
@@ -32,7 +30,7 @@ This system trains a humanoid robot (H1) with Allegro hands to perform precise g
 ### Environment
 - **Robot**: H1 humanoid with right Allegro hand
 - **Sensors**: Head camera, joint encoders, contact sensors
-- **Object**: Cylindrical object for grasping
+- **Object**: object for grasping
 - **Physics**: MuJoCo simulation with realistic dynamics
 
 ## Installation
@@ -51,26 +49,6 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements_hpc.txt
 ```
 
-### HPC Deployment (TU Dresden)
-```bash
-# Connect to HPC
-ssh zih-username@login1.alpha.hpc.tu-dresden.de
-
-# Create workspace
-ws_allocate -F beegfs -n right-hand-grasp -d 90
-cd /beegfs/ws/zih-username/right-hand-grasp
-
-# Upload files
-scp -r Right_hand_grasp/ zih-username@login1.alpha.hpc.tu-dresden.de:/beegfs/ws/zih-username/right-hand-grasp/
-
-# Setup environment
-cd Right_hand_grasp/
-bash setup_hpc.sh
-
-# Submit training job
-sbatch submit_tu_dresden.sh
-```
-
 ## Usage
 
 ### Local Testing
@@ -83,18 +61,6 @@ python3 enhanced_cnn_policy.py
 
 # Run training (requires A100 GPU)
 python3 train_vision_grasping_policy.py
-```
-
-### HPC Training
-```bash
-# Monitor job status
-squeue --me
-
-# View training progress
-tail -f vision-grasping-*.out
-
-# Check for errors
-tail -f vision-grasping-*.err
 ```
 
 ## File Structure
@@ -133,18 +99,6 @@ Right_hand_grasp/
 - **Success Rate**: 60-80% after full training
 - **Convergence**: Grasping behavior within 50,000 steps
 
-## Hardware Requirements
-
-### Minimum (Local Testing)
-- GPU: 8GB+ VRAM (RTX 3080, RTX 4080, etc.)
-- RAM: 16GB+
-- Storage: 5GB
-
-### Recommended (HPC Training)
-- GPU: A100 (80GB VRAM)
-- RAM: 64GB+
-- Storage: 10GB
-
 ## Dependencies
 
 - Python 3.9+
@@ -182,5 +136,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - MuJoCo physics simulator
 - PyTorch deep learning framework
-- TU Dresden HPC cluster
 - Allegro hand hardware specifications
